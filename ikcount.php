@@ -11,7 +11,7 @@ curl_setopt_array($curl, array(
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
   CURLOPT_CUSTOMREQUEST => 'POST',
   //CURLOPT_POSTFIELDS =>'{"dataType":"summary","locations":["WITCL001A1L1","WITCL001A1L2","WITCL001A1L3","WITCL001A1L4","WITCL001A1L5","WITCL001A1L6","WITCL001A1L7","WITCL001A1L8"],"filterType":3,"month":5,"year":2023,"detailed":false,"adjEvents":false}',
-  CURLOPT_POSTFIELDS =>'{"dataType":"summary","locations":["WITCL001A1L1","WITCL001A1L2","WITCL001A1L3","WITCL001A1L4","WITCL001A1L5","WITCL001A1L6","WITCL001A1L7","WITCL001A1L8"],"filterType":1,"day":"'.$hoy.'","detailed":false,"adjEvents":false}',
+  CURLOPT_POSTFIELDS =>'{"dataType":"summary","locations":["WITCL001A1L1","WITCL001A1L2","WITCL001A1L3","WITCL001A1L4","WITCL001A1L5","WITCL001A1L6","WITCL001A1L7","WITCL001A1L8","WITCL001A1L9","WITCL001A1L10"],"filterType":1,"day":"'.$hoy.'","detailed":false,"adjEvents":false}',
   CURLOPT_HTTPHEADER => array(
     'Accept: application/json, text/javascript, */*; q=0.01',
     'Accept-Language: es-419,es;q=0.9,en;q=0.8',
