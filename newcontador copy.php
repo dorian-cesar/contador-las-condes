@@ -4,7 +4,7 @@ header("Refresh:60");
 
 include "conexion.php";
 
-$user="lasCondes";
+$user="dorian";
 
 $pasw="123";
 
@@ -152,7 +152,7 @@ foreach ($ids as $id) {
          
     }
 
-    echo "  id_tracker: $id_tracker Fecha : $fecha, Estatus: $status, Entradas: $entrada, Salidas : $salida, Consulta: $hoylog";
+     "  id_tracker: $id_tracker Fecha : $fecha, Estatus: $status, Entradas: $entrada, Salidas : $salida, Consulta: $hoylog";
  
    
 
@@ -183,7 +183,9 @@ foreach ($ids as $id) {
 
     if ($maxi != $entrada || $maxisalidas != $salida) {
 
-        $ejecutar = mysqli_query($conex, $query);
+        //$ejecutar = mysqli_query($conex, $query);
+
+        echo $query;
     } else {
 
         //no hace nada
