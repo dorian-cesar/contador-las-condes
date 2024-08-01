@@ -6,8 +6,10 @@ header("Access-Control-Allow-Headers: Content-Type");
 // Configurar las credenciales de Basic Auth
 $authUser = 'lascondes';
 $authPassword = 'wit2024';
+echo $_SERVER['PHP_AUTH_USER'];
+echo $_SERVER['PHP_AUTH_PW'];
 
-// Verificar si la cabecera Authorization está presente
+/* Verificar si la cabecera Authorization está presente
 if (!isset($_SERVER['PHP_AUTH_USER']) || !isset($_SERVER['PHP_AUTH_PW']) || 
     $_SERVER['PHP_AUTH_USER'] !== $authUser || $_SERVER['PHP_AUTH_PW'] !== $authPassword) {
     header('WWW-Authenticate: Basic realm="Mi API"');
@@ -15,6 +17,7 @@ if (!isset($_SERVER['PHP_AUTH_USER']) || !isset($_SERVER['PHP_AUTH_PW']) ||
     echo 'No autorizado';
     exit;
 }
+    */
 
 //header("Refresh:60");
 
