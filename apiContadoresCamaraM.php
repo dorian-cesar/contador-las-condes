@@ -4,8 +4,8 @@ header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");
 
 // Configurar las credenciales de Basic Auth
-$authUser = 'LasCondes';
-$authPassword = 'Wit2024';
+$authUser = 'lascondes';
+$authPassword = 'wit2024';
 
 // Verificar si la cabecera Authorization está presente
 if (!isset($_SERVER['PHP_AUTH_USER']) || !isset($_SERVER['PHP_AUTH_PW']) || 
