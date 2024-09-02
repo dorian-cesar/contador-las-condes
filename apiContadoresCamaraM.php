@@ -4,10 +4,10 @@ header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");
 
 // Configurar las credenciales de Basic Auth
-$authUser = 'lascondes';
-$authPassword = 'wit2024';
-echo $_SERVER['PHP_AUTH_USER'];
-echo $_SERVER['PHP_AUTH_PW'];
+//$authUser = 'lascondes';
+// $authPassword = 'wit2024';
+// echo $_SERVER['PHP_AUTH_USER'];
+// echo $_SERVER['PHP_AUTH_PW'];
 
 /* Verificar si la cabecera Authorization está presente
 if (!isset($_SERVER['PHP_AUTH_USER']) || !isset($_SERVER['PHP_AUTH_PW']) || 
@@ -21,14 +21,15 @@ if (!isset($_SERVER['PHP_AUTH_USER']) || !isset($_SERVER['PHP_AUTH_PW']) ||
 
 //header("Refresh:60");
 
-include "conexion.php";
+include __DIR__."/conexion.php";
 
-$user = "monitoreogps_lascondes@wit.la";
+$user = "Camara";
 $pasw = "123";
 
-$consulta = "SELECT hash FROM masgps.hash2 WHERE user='$user' AND pasw='$pasw'";
+$consulta = "SELECT hash FROM masgps.hash WHERE user='$user' AND pasw='$pasw'";
 $resultado = mysqli_query($conex, $consulta);
 $data = mysqli_fetch_array($resultado);
+
 $hashed = $data['hash'];
 
 //$hashed="68d5c08e6e4d5b6c33ce47cc488a62e7";
@@ -37,8 +38,8 @@ date_default_timezone_set('America/Santiago');
 $hoy = date("Y-m-d");
 $hoylog = date("Y-m-d H:i:s");
 
-include "ikcount.php";
-include "lista_tracker.php";
+include __DIR__."/ikcount.php";
+include __DIR__."/lista_tracker.php";
 
 $mh = curl_multi_init();
 $curl_array = [];
